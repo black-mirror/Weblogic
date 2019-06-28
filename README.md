@@ -3,7 +3,7 @@
 
 
 ```
-weblogic CVE-2019-2729 POC
+weblogic CVE-2019-2725 CVE-2019-2729 POC
 执行命令并回显
 
 usage:
